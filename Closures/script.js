@@ -27,7 +27,7 @@ myName = "Babo"
 
 // printNewName();
 
-
+// ============================================================================================================================= //
 
 // MORE COMPLEX EXAMPLE AND MOST COMMON USE CASE
 
@@ -41,4 +41,9 @@ function outerFunction(outerVariable) {
 
 const newFunction = outerFunction("outside");
 newFunction("inside");
-// Closure - Kad imamo funkciju unutar druge funkcije, inner funkcija ima pristup svim varijablama i skoupu u outer funkcije 
+
+// Closure - Kad imamo funkciju unutar druge funkcije, inner funkcija ima pristup svim varijablama i skoupu outer funkcije cak i kad je
+// izvrsavanje funkcije outer zavrseno.
+
+// Closure omogućava da se varijable koje su deklarisane u spoljnom okruženju funkcije (roditeljskom scope-u) očuvaju i koriste unutar
+//  same funkcije, čak i kada je roditeljski scope završio svoje izvršavanje.
