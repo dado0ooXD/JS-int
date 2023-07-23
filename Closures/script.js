@@ -8,7 +8,7 @@ function printName() {
 
 myName = "Amina"
 
-printName();  // Console loguje zadnju vrednost koja je dodeljena varijabli myName;
+// printName();  // Console loguje zadnju vrednost koja je dodeljena varijabli myName prije pozivanja ove funkcije;
 
 
 function printNewName() {
@@ -17,12 +17,28 @@ function printNewName() {
 
 myName = "Mejra"
 
-printNewName();  // Console loguje zadnju vrednost koja je dodeljena varijabli myName;
+// printNewName();  // Console loguje zadnju vrednost koja je dodeljena varijabli myName prije pozivanja ove funkcije;
 
 myName = "Mama";
 
-printName();   // Console loguje zadnju vrednost koja je dodeljena varijabli myName;
+// printName();   // Console loguje zadnju vrednost koja je dodeljena varijabli myName prije pozivanja ove funkcije;
 
 myName = "Babo"
 
-printNewName();
+// printNewName();
+
+
+
+// MORE COMPLEX EXAMPLE AND MOST COMMON USE CASE
+
+
+function outerFunction(outerVariable) {
+    return function innerFunction(innerVariable) {
+        console.log("Outer Variable: ", outerVariable)
+        console.log("Inner Variable: ", innerVariable)
+    }
+}
+
+const newFunction = outerFunction("outside");
+newFunction("inside");
+// Closure - Kad imamo funkciju unutar druge funkcije, inner funkcija ima pristup svim varijablama i skoupu u outer funkcije 
