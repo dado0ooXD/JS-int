@@ -36,7 +36,8 @@ const book = lufthansa.book;
 // book(23, "Cristiano Ronaldo")
 
 book.call(eurowings, 23, "Cristiano Ronaldo");
-console.log(eurowings);
+book.call(eurowings, 32, "Novi Pazar");
+// console.log(eurowings);
 
 
 
@@ -49,7 +50,9 @@ const game = {
 
 function info() {
   console.log(`${this.title} was released in ${this.year}`);
+  // console.log(this); === Ovaj console log vraca objekat game jer sam ga pozvao preko funkcije call().
 }
 
 // info() === undefined was released in undefined.
-// info.call(game); === Fortnite was released in 2017.
+info.call(game); 
+// === Fortnite was released in 2017.
