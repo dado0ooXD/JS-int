@@ -8,29 +8,27 @@ const lufthansa = {
   book(flightNum, name) {
     console.log(
       `${name} booked a seat on ${this.airline} flight ${this.iataCode} ${flightNum}`
-      );
-      this.bookings.push({flight: `${this.iataCode} ${flightNum}`, name})
+    );
+    this.bookings.push({ flight: `${this.iataCode} ${flightNum}`, name });
   },
 };
 
 // Funkcija book() iz objekta lufthansa console loguje prvo recenicu a onda pusha u prazan booking array
 // dva objekta.
-// Kad pozovemo funkciju book() iz objekta lufthansa sa argumentima i console logujemo objekat lufthansa 
+// Kad pozovemo funkciju book() iz objekta lufthansa sa argumentima i console logujemo objekat lufthansa
 // videcemo da je bookings array dobio novi objekat koji cine argumenti funkcije book().
 
 lufthansa.book(165, "Davud Carovac");
 lufthansa.book(287, "Amina Carovac");
 lufthansa.book(220, "Merjem Carovac");
 
-
-console.log(lufthansa)
-
+console.log(lufthansa);
 
 const eurowings = {
-    name: "Eurowings",
-    iataCode: "EW",
-    bookings: [],
-}
+  name: "Eurowings",
+  iataCode: "EW",
+  bookings: [],
+};
 
 const book = lufthansa.book;
 
@@ -38,4 +36,20 @@ const book = lufthansa.book;
 // book(23, "Cristiano Ronaldo")
 
 book.call(eurowings, 23, "Cristiano Ronaldo");
-console.log(eurowings)
+console.log(eurowings);
+
+
+
+// ONE MORE EXAMPLE
+
+const game = {
+  title: "Fortnite",
+  year: 2017,
+};
+
+function info() {
+  console.log(`${this.title} was released in ${this.year}`);
+}
+
+// info() === undefined was released in undefined.
+// info.call(game); === Fortnite was released in 2017.
