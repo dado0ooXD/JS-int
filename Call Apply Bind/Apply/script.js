@@ -1,7 +1,7 @@
 // APPLY
 
 // Apply() metoda je slicna call() metodi, ali glavna razlika je u nacinu prosledjivanja argumenta,
-// kod apply() metode argumenti koje saljemo pored objekta moraju biti u nizu. funkcija.apply(objekat, [arg1, arg2]).
+// kod apply() metode argumenti koje saljemo pored objekta moraju biti u nizu ===> imeFunkcije.apply(imeObjekta, [prviArg, drugiArg]).
 
 const game = {
   title: "Fortnite",
