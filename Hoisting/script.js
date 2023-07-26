@@ -11,7 +11,10 @@
 //     return a+b
 // }
 
-// U ovom slucaju sve radi kao kad je sumFunc bila iznad console logova i konzole nece da vrate error.
+// U ovom slucaju sve radi kao kad je sumFunc bila iznad console logova i console log za sumFunc nece da vrati error.
+// Razlog zbog kog sumFunc radi je zbog hoistinga koji automatski podize funkcije definisane sa "function keywordom"
+//  na vrh i izvrsava se sa vrha na dole i zbog toga funkcije koje su definisane sa "function" keywordom mogu da se 
+// pozivaju pre inicijaliziranja.
 
 
 
@@ -30,4 +33,4 @@ function sumFunc(a, b) {
 }
 
 // U ovom slucaju sumFunc ce da se ispise u konzoli, a sumConst ce da javi error zato sto je pozvana pre 
-// definisanja.
+// inicijaliziranja.
