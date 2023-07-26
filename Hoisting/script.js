@@ -39,7 +39,6 @@
 
 
 console.log(a)
-
 var a = 2
 
 // U ovom slucaju u kozoli ce da se ispise undefined zbog toga sto se varijable definisane sa var takodje hoistuju
