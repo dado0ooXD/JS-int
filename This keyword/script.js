@@ -34,4 +34,16 @@
 // ======================================================================== //
 
 
+function f() {
+    return this.a
+}
 
+var g = f.bind({ a: "Davud" })
+console.log(g());
+
+var h = g.bind({ a: "Mejra" });  // Ne radi. Ispisuje u konzoli Davud
+console.log(h());
+
+
+var o = { a: 8, f: f, g: g, h: h }
+console.log(o.f(), o.g(), o.h())
