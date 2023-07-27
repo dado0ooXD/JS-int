@@ -41,9 +41,23 @@ function f() {
 var g = f.bind({ a: "Davud" })
 console.log(g());
 
-var h = g.bind({ a: "Mejra" });  // Ne radi. Ispisuje u konzoli Davud
+var h = g.bind({ a: "Mejra" });  // Ne radi. Ispisuje u konzoli Davud.
 console.log(h());
 
 
 var o = { a: 8, f: f, g: g, h: h }
+
 console.log(o.f(), o.g(), o.h())
+
+
+// ========================================================================= //
+
+
+var d = {
+    age: 18,
+    f: function () {
+        return this.age
+    }
+}
+
+console.log(d.f())
