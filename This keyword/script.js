@@ -1,3 +1,4 @@
+// This = A reference to the object that we are currently working with
 // method => obj
 // function => global (window, global)
 
@@ -53,11 +54,31 @@ console.log(o.f(), o.g(), o.h())
 // ========================================================================= //
 
 
-var d = {
+const d = {
     age: 18,
-    f: function () {
-        return this.age
+    f: function (name) {
+        return this.age + " " + name
     }
 }
 
-console.log(d.f())
+
+// This keyword in classes
+
+
+class Player {
+    constructor(name, age, height, position) {
+        this.name = name,
+            this.age = age,
+            this.height = height,
+            this.position = position
+    }
+
+    whatIsThis() {
+        return console.log(this); // This se odnosi na ovaj objekat i ovaj console log vraca objekat i njegove propertise.
+    }
+ 
+}
+
+const rudiger = new Player("Rudiger", 30, "190cm", "cb");
+rudiger.whatIsThis();
+
