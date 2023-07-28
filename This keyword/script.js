@@ -1,4 +1,5 @@
-// This = A reference to the object that we are currently working with
+// This = A reference to the object that we are currently working with.
+// This keyword in methods reference parent object.
 // method => obj
 // function => global (window, global)
 
@@ -17,7 +18,7 @@
 //   tags: ["a", "b", "c"],
 //   showTags() {
 //     this.tags.forEach((item) => {
-//       console.log(this.title, item);
+//       return console.log(this.title, item);
 //     });
 //   },
 // };
@@ -54,6 +55,8 @@ const d = {
   },
 };
 
+// ======================================================================== //
+
 // This keyword in classes
 
 class Player {
@@ -65,7 +68,8 @@ class Player {
   }
 
   whatIsThis() {
-    return console.log(this); // This se odnosi na ovaj objekat i ovaj console log vraca objekat i njegove propertise.
+    return console.log(this); // This se odnosi na ovaj objekat i ovaj console log vraca objekat i njegove propertise
+    // zato sto se nalazimo unutar ovog objekta.
   }
 
   aboutMe(club) {
@@ -81,4 +85,6 @@ rudiger.whatIsThis(); // ===> Player {name: 'Rudiger', age: 30, height: '190cm'
 alaba.whatIsThis(); // ===> Player {name: 'Alaba', age: 29, height: '182cm', position: 'cb'}
 
 rudiger.aboutMe("Real Madrid"); // ===> My name is Rudiger, im 30 years old and i also play the cb position
+// for Real Madrid football club.
+alaba.aboutMe("Real Madrid"); // ===> My name is Alaba, im 29 years old and i also play the cb position
 // for Real Madrid football club.
