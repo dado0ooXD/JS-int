@@ -16,8 +16,13 @@ function revString(str) {
 
 // console.log(revString("Davud Carovac"));
 
-// Swap two strings without using a third variable
+// Solution 2
+function reversed(str) {
+  return str.split("").reduce((start, curr) => curr + start, "");
+}
+// console.log(reversed("Davud"));
 
+// Swap two strings without using a third variable
 let a = "Pet";
 let b = "Deset";
 // console.log(a, b);
@@ -200,3 +205,101 @@ function isStringBalanced(str) {
 }
 
 // console.log(isStringBalanced("()"));
+
+// Remove duplicates
+
+// First solution with new Set
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+// console.log(removeDuplicates([1, 1, 3, 4, 5, 5]));
+
+// Second solution with object
+
+function removeDuplicates2(arr) {
+  const obj = {};
+
+  for (let item of arr) {
+    if (obj[item]) {
+      obj[item]++;
+    } else {
+      obj[item] = 1;
+    }
+  }
+  return Object.keys(obj);
+}
+// console.log(removeDuplicates(["Davud", "Davud", "Davud", "Nista"]));
+// console.log(removeDuplicates([1, 2, 4, 5, 6, 6, 2]));
+
+// Count vowels
+function countVowels(str) {
+  let count = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+
+  for (let i = 0; i < str.length; i++) {
+    for (let item of str) {
+      if (vowels.includes(item)) {
+        count++;
+      }
+    }
+    return count;
+  }
+}
+
+// console.log(countVowels("aeiou")); // 5
+// console.log(countVowels("Davud")); // 2
+
+// Capitalize first character of word
+
+function capitalizeFirst(str) {
+  return str
+    .split(" ")
+    .map((word) => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
+}
+
+// console.log(capitalizeFirst("hi my name is davud"));
+
+// Most common character in string
+
+// function mostCommonChar(str) {
+//   const charMap = {};
+//   let max = 0;
+//   let maxChar = "";
+
+//   for (let item of str.replace) {
+//     if (charMap[item]) {
+//       charMap[item]++;
+//     } else {
+//       charMap[item] = 1;
+//     }
+//   }
+
+//   for (let key in charMap) {
+//     if (charMap[key] > max) {
+//       max = charMap[key];
+//       maxChar = max;
+//     }
+//   }
+//   return maxChar;
+// }
+
+// console.log(mostCommonChar("Davvvud"));
+
+function fizzBuzz(num) {
+  for (let i = 0; i < num; i++) {
+    if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
+
+// fizzBuzz(100);
+
+// Anagram
