@@ -163,4 +163,40 @@ const getMiddle = (str) => {
   }
 };
 
-console.log(getMiddle("aw"));
+// console.log(getMiddle("aw"));
+
+// Is palindrome second solution
+
+function isPalindrome2(str) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i].toLowerCase() !== str[str.length - 1 - i].toLowerCase()) {
+      return false;
+    }
+    return true;
+  }
+}
+
+// console.log(isPalindrome2("Anavolimilovana"));
+
+// Is string balanced
+
+function isStringBalanced(str) {
+  const stack = [];
+
+  for (let char of str) {
+    if (char === "(") {
+      stack.push(char);
+    } else {
+      const lastItem = stack.pop();
+      if (lastItem !== "(") {
+        return false;
+      }
+    }
+  }
+
+  if (stack.length !== 0) return false;
+
+  return true;
+}
+
+// console.log(isStringBalanced("()"));
