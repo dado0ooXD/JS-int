@@ -228,8 +228,22 @@ function removeDuplicates2(arr) {
   }
   return Object.keys(obj);
 }
+
+// Third and best solution
+
+const removeDuplicatesNew = (arr) => {
+  const finalArr = [];
+  for (let item of arr) {
+    if (!finalArr.includes(item)) {
+      finalArr.push(item);
+    }
+  }
+  return finalArr;
+};
+
 // console.log(removeDuplicates(["Davud", "Davud", "Davud", "Nista"]));
 // console.log(removeDuplicates([1, 2, 4, 5, 6, 6, 2]));
+// console.log(removeDuplicatesNew([1, 2, 3, 3, 3, 3, 3, 4, 1, 3, 2]));
 
 // Count vowels
 function countVowels(str) {
@@ -301,5 +315,3 @@ function fizzBuzz(num) {
 }
 
 // fizzBuzz(100);
-
-// Anagram
