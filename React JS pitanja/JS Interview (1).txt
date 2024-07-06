@@ -1,0 +1,153 @@
+1. EVENT BUBBLING: In DOM when element receive event, that event is bubble up to parent and ancestors.
+This means that this event from child element trigger events in parent and ancestors elements.
+Event bubbling is the phase where the event bubbles up from the target element through parent and ancestors to the root.
+
+2. EVENT DELEGATION is when we handle event on a parent or ancestor instead of the actual element where event was triggered.
+Instead of placing event listener on every element, we can just place event listener on parent div and with that
+we can reduce number of event handler.
+
+3. HANDLING EVENTS IN JS: We have 3 ways of handling events in JS, Inline -for example <button onClick = {function()}>, 
+addEventListener, and Event Handler property -for example function handler(); button.onClick = handler.
+
+4. PREVENT DEFAULT IN JS: Some element have default behaviour when an event is triggered on them, so we use preventDefault() to
+prevent or stops this default behaviours. For example form submition sends data to url on action attribute of the form. When form
+is submited on click or any other event browser navigates to the value of href attribute and we can prevent this behaviour.
+
+5. STOP PROPAGATION: We use stopPropagation() when we want to stop or prevent event bubbling from child element to the parent and ancestors 
+and prevent event handlers to them.
+
+6. NULL AND UNDEFINED are two different values in Javascript. Null type is a object that is explicitly assigned to a variable.It represents
+ the intentional absence of any object value. Undefined type is when variable has been declared but has no assigned value.
+
+7. CLOSURE is concept that refers to inner functions ability to have access to outer function scope  even after the outer function has
+ finished executing.
+
+8. TYPICAL USE CASE FOR ANONYMOUS FUNCTIONS is creating IIFE(Immediately Invoked Function Expression).
+
+9. HOISTING is concept in Javascript which moving declaration of variables and function to the top of their scopes. This means that you can
+ use variables and functions in your code before they are actually declared.
+
+--10. EVENT CAPTURING  In event capturing, an event propagates from the outermost element to the target element. It is the opposite of 
+event bubbling.
+
+11. ATTRIBUTES AND PROPERTIES:  Attributes are part of an HTML element and they are specified in the HTML markup. They provide initial 
+ values or settings for elements when the web page is initially loaded. Properties are part of the JavaScript object that represents
+ an HTML element in the DOM.The key difference between attributes and properties is that attributes are specified in the HTML markup
+ and provide initial values, while properties are part of the JavaScript.
+
+12. STRICT MODE is mode that introduces stricter rules and it is used for writing secure JS code. When strict mode is activated,
+ JavaScript becomes less tolerant of some common errors and helping programs write cleaner and safer code.
+
+13. DEBUGgING: Tools which we use for debugging JS code can be console logs, browser dev tools, error messages, source maps, linters,
+watch expressions, breakpoints...
+
+14. MUTABLE AND IMMUTABLE OBJECTS: Mutable objects are those whose state or data can be modified after they are created. Operations 
+or methods on mutable objects can change their data or properties. Immutable objects are those whose state cannot be changed after
+ they are created. Benefits of immutable objects: predictability, concurrency, debugging...
+
+15. SYNCHRONOUS and ASYNCHRONOUS functions different in the way they are executed. Synchronous functions are executed in the order in 
+which they are written and blocks the execution of the entire program. Asynchronous functions are typically used for tasks that may 
+take some time, such as network requests, and they don't blocks the execution of the program.
+
+16. DIFFERENCES BETWEEN ES6 CLASS AND ES5 FUNCTION CONSTRUCTORS ES6 classes provide readable way to define classes 
+and their methods. ES6 classes are preferred for modern JavaScript development due to their cleaner syntax and improved readability. 
+However, ES5 constructor functions are still used in legacy codebases and environments where ES6 features are not fully supported.
+
+17. ARROW FUNCTION IN CONSTRUCTOR Using arrow functions for methods in a constructor can be advantageous when we want to ensure
+that this behaves consistently.
+
+18. HIGHER ORDER FUNCTION are function which accept function as argument or return function or do it both.Example: filter function, map function,
+reduce.
+
+19. OBJECT DESTRUCTURING is ES6 feature which allows us to extract objects and uses their properties as variables which makes your code
+ more readable and maintainable.
+
+20. TEMPLATE LITERALS is ES6 feature which provide an easy way embedd variables and expressions into strings using `` and ${}.
+
+21. DIFF BETWEEN REST AND SPREAD OPERATORS: Rest Operator is used to group the remaining of a collection into another collection while
+spread operator is used to spread a whole collection into another collection.
+
+22. HOW YOU CAN SHARE CODE: Using the export and import keywords.
+
+23. DIFF BETWEEN WHILE AND DO-WHILE LOOPS: A while loop checks the condition, then executes the loop. A Do/While executes the loop
+ and then checks the conditions.
+
+24. DIFF BETWEEN WINDOW AND DOCUMENT: Window object is global object. Document object is a property of window object. Document represents
+ a web page that is loaded in the browser. By accessing the document object, we can access the elements in the HTML page. 
+
+25. DIFF BETWEEN LOCAL AND SESSION STORAGE: They are both web storage option but data in localStorage doesn't expire, we have to delete
+ them manually while data in sessionStorage is cleared when the page session ends or when we close tab.
+
+26. CSS GRID: CSS splits the page into grids and utilizes those grids to handle the HTML content. 
+
+27. FUNCTION DECLARATION AND EXPRESSION: Function declarations are named functions where we declare the name after function keyword and
+they are hoisted, while function expression are anonymous or named functions and we store them in variable, and they are not hoisted.
+
+28. COERCION is an automatic type conversion, where value is converted from one data type to another. Example var a = 50; var b = "Hi"
+const sum = a + b sum === "50Hi" typeof sum = string. Second example: const sum = "20" * 30; sum = 600 type of number; const sum = 50 + true;
+sum = NaN; const sum = 50 * true; sum = 51; true = 1; false = 0
+
+29. EXPLICIT TYPE CONVERSION is when we intetionally convert value from one type to another. Number("2") = converting string to number.
+
+30. IIFE(Immediately invoked function expression) are function expressions that are immediately invoked after it is defined. 
+They are useful in cases where we want to do some function stuff without declaring a function. Variables defined inside
+ IIFE are only available inside IIFE. 
+
+31. TYPES OF ERROR: There are 3 types of errors. Syntax error occur when the code doesn't fit with syntax of JS. Runtime errors occurs
+ during the execution of a JavaScript program. They are typically result from unexpected or invalid conditions.
+ Logical error when the syntax is correct but the intended logic not.
+
+32. JAVASCRIPT is a single-threaded, non-blocking, asynchronous, concurrent programming language with lots of flexibility.
+
+33. EVENT PROPAGATION refers to how events travel through the Document Object Model (DOM) tree. The DOM tree contains parent
+/child/sibling elements in relation to each other. 
+
+34. EVENT BUBBLING AND CAPTURING are the two phases of propagation. Bubbling travels from the place where event is triggered to the root, 
+and capturing travels from the root to place where event is triggered.
+
+35. THIS KEYWORD refers to the object it belongs to. When we are outside of any function or object this keyword points to the global
+ (window) object. When this keyword is used as method of object it points to object itself.
+IN FUNCTION: If function is called directly this keyword points to global (window) object. If function is called as method of object 
+this keyword points to the object itself. If the function is called using the new keyword to create instance of constructor function
+this keyword points to newly created object.
+THIS KEYWORD IN REGULAR AND ARROW FUNCTIONS: Arrow functions dont have their own this instead inherit it from surrounding code (this inside
+arrow function points to the value of this keyword in parent scope).
+
+36. WINDOW represent the browser window. All Javascript objects, functions and variables becomes memebers of window object. Global variables are
+properties of window object. Global functions are methods of window object.
+
+37. DIFF BETWEEN TAG AND ATTRIBUTE: HTML tags are used to hold the HTML element. HTML element holds the content. Attributes provide information
+or characteristics of about HTML element and they are always specified in the opening tag of an HTML element.
+
+38. DOM represents the web page as tree like structure which allows Javascript to dinamically access and manipulate the content of a web page.
+ DOM can be used to add, remove, or modify elements on the page.
+
+39. DIFF BETWEEN CALL, APPLY AND BIND - Call and apply invoke function and set "this" context while bind creates new function which is not called
+ immediately but can be used later. Arguments are inidividually passed in  call, but in apply we need to pass array with arguments.
+
+40. PROTOTYPES are mechanism by which Javascript objects inherit features from another object.
+
+41. MEMOIZATION is an optimization technique that makes applications more efficient faster by storing computation results in cache, 
+and retrieving that same information from the cache the next time it's needed instead of computing it again.
+
+42. ASYNC AWAIT keywords are used together to handle asyncronous operations in a more readable manner. Async keyword is used to indicate that
+function is asynchronous and allows function to return a promise. Await keyword pause function execution until promise is resolved or rejected
+and only can be used inside a async function.
+
+43. PARAMETERS AND ARGUMENTS: Parameters are names listed in function definition, while arguments are values passed to the function.
+
+44. Event loop in Javascript is single thread that handles all asynchronous callbacks, such as user inputs, network requests and other events.
+When a function is called, it's pushed onto the call stack, and when it returns, it's popped from the stack. When asynchronous tasks are completed
+and ready for execution they are placed in callback queue. Microtasks queue holds microtasks and it includes promise callbacks and queueMicrotasks.
+In summary event loop allows Javascript to handle events, timers and other operations without blocking execution of other code.
+
+45. Currying is technique that transform a function that takes multiple arguments into a series of functions that take a single argument each. 
+It helps to create a higher order function.
+
+46. Events are actions or occurrences that happen in web browser, such as click, key press or form submission.
+
+47. PROMISES are used to handle asynchronous operations in Javascript. Promise is object that represent eventual fulfillment of an asynchronous
+operation. Promise has three states: Pending when promise hasn't fullfiled or rejected yet, Fulfilled when promise was successfully resolved and
+result is value and Rejected when promise fail and result is an error object. On function which return promise we can use then method to handle
+successful promise, and catch method when promise is rejected.
+to

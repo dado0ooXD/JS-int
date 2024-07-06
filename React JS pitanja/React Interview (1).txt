@@ -1,0 +1,87 @@
+1. PROPS is used for passing data from one component to another. They have the same syntax as HTML attribute and we receives them in 
+child components as object.
+
+2. PROPS DRILLING is concept where props drilling through several child components to get to the final component that need that prop.
+This is not good practice bcs it can make application difficulty to manage and can make code difficulty to read. Solution for this
+problem is that we use some state management like redux or context or composing components in better way.
+
+3. HIGHER ORDER COMPONENTS are components that take a component as input and return new enhaced component as output. It's like a special
+function that make your components more powerful and add extra functional to them.
+
+4. CONDITIONAL RENDERING is a crucial concept in React that allows components to render different content based on certain condition or variables.
+In JSX we can conditionally render components using JS expressions. This expressions determine whether a particular piece of UI should be displayed
+or not.
+
+5. REACT is open source JS library. React is used for building user interface and used to simplify creation of complex UI applications using
+reusable components.
+
+6. SINGLEPAGE APPLICATIONS are web applications that have only one single web page. Whenever user do some action on the website, content is
+dinamically updated without refreshing or loading new page.
+
+7. DEFINITION OF DOM: Dom represents the web page as tree like structure which allows Javascript to dinamically access and manipulate the
+content of a web page. DOM can be used to add, remove, or modify elements on the page, change the styles and attributes of elements, or handle
+user interactions like clicks and keystrokes.
+
+8. KEYS: In React when we render a list of elements it's important to assign unique key prop to each element. Key prop is a special attribute 
+that helps React to update, identify and reorder elements in list.
+
+9. REACT HOOKS are JS functions which allows functional components to manage state, side effects and other features that were previously
+only available in class components.
+
+10. JSX is JS extension syntax used in React to write HTML and Javascript code together. With jsx we can create resusable and dynamic UI.
+
+11. Babel is toolchain that converts modern JS code into version compatibile with current and older browser environments. Babel enables
+ React developers to use the latest JavaScript syntax in their components.
+
+12. CLASS AND CLASSNAME: Class is reserved keyword in JS, but since we use JSX which is extension for JS we have to use className bcs JS
+thinks that we want to create JS class instead to set class for element.
+
+13. DATA FLOW in React refers to the way data is passed between components. In React is primarily based on unidirectional data flow,
+ where data moves from parent components to child components via props and events.
+
+14. HOW REDUX WORKS: We setup global data store, in store we have our state and functions and we dispatch actions from  any component,
+then actions triggers reducer functions that will then update the state. In the end in components we can select data from store.
+
+15. REACT COMPONENTS are reusable building block used for building react applications. Components break a UI down into reusable parts.
+
+16. DIFF BETWEEN PROPS AND STATE: Props are used to pass data from a parent component to a child component, while state is used to manage
+ data within a component. Props are immutable and cannot be changed within a component, while state is mutable and can be updated using the
+ setState function.
+
+17. DIFF BETWEEN CLASS AND FUNCTIONAL COMPONENTS: Functional components are written as JS function, Class components as JS Class.
+Functional components don't have a state or lifecycle methods, Class components have a state and lifecycle methods like ComponentDidMount,
+and ComponentDidUpdate. Functional components are faster as they don't have state and lifecycle methods, Class components are slower as have
+state and lifecycle methods and react need to do more work to render components. Class components require constructor and use of "this" and
+that makes them longer unlike Functional components.
+
+18. EVENTS IN REACT are actions that are triggered by user, like button click, hover, form submission.
+
+19. VIRTUAL DOM: React doesn't interact with real DOM. Virtual DOM represent lightweight copy of real DOM. With Virtual DOM React can 
+efficiently update only the parts of the DOM that need to change and that resulting in better performance and a more responsive user
+experience.
+
+20. DIFF BETWEEN DOM AND VIRTUAL DOM: DOM is actual structure of the web page, Virtual DOM is memory represenation, DOM is slow and can directly
+update HTML, Virtual DOM is fast and can't update HTML directly. In DOM any change updates the entire DOM tree but in Virtual DOM any change
+updates relevant Node in the tree.
+
+21. STATE is private data of component, which can change during lifetime, and every state change will trigger component re-render. In class
+components state is represented by object and can be modified with setState function, but in functional component we have useState hook which
+gives us initial value and update state function.
+
+22. REACT FRAGMENT gives us way to return multiple different elements from component without any wrapper div or component around them. This
+is useful bcs we don't cultter up html with a bunch of unnecessary divs.
+
+23. DIFF BETWEEN CONTROLLED AND UNCONTROLLED INPUTS: Uncontrolled components are elements that are handled by DOM, while controlled are controlled with
+state. Controlled is when we use state as value of input and use onChange method to change that value. Uncontrolled is when we access to value of input 
+directly using ref, without state.
+
+24. USE MEMO is hook that is used for memoization and to prevent unnecessary re-renders by caching results. Takes two arguments, first is 
+function that computes value and second is array of dependencies.
+
+25. Reconciliation is the process through which React updates the DOM efficiently by comparing the previous and new virtual DOM trees.
+It identifies the minimal set of changes required to update the actual DOM.
+
+26. OPTIMIZING REACT APP: Using useMemo to prevent unnecessary rerenders or using tools like React DevTools.
+
+27. REACT VS OTHERS: There are several reasons why i use React over other frameworks. Component-Based, Virtual DOM,
+Large Community, Big Components library, React Native.
